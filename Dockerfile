@@ -1,8 +1,7 @@
 FROM docker.io/fedora:38
 
-
 LABEL com.github.containers.distrobox="true" \
-      name="archlinux" \
+      name="fedora" \
       version="latest"
 
 RUN dnf update -y
