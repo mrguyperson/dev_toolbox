@@ -20,7 +20,7 @@ jobs:
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build the container
+    - name: Build the container
       run: |
         docker build . --file Dockerfile --tag ghcr.io/mrguyperson/dev_toolbox:latest
         docker run ghcr.io/mrguyperson/dev_toolbox:latest
