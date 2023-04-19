@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/fedora:38
+FROM registry.fedoraproject.org/fedora:latest
 
 LABEL com.github.containers.distrobox="true" \
       name="fedora" \
