@@ -1,4 +1,4 @@
-FROM docker.io/fedora:38
+FROM registry.fedoraproject.org/fedora:38
 
 LABEL com.github.containers.distrobox="true" \
       name="fedora" \
