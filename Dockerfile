@@ -4,20 +4,24 @@ LABEL com.github.containers.distrobox="true" \
       name="fedora" \
       version="latest"
 
-RUN dnf update -y
+RUN sudo dnf update -y
 
-RUN sudo dnf copr enable iucar/cran
 
-RUN dnf install -y which \
-                    r-base \
-                    r-base-dev \
+RUN sudo dnf install -y which \
+                    R \
                     atlas \
                     rstudio-desktop \
                     neofetch \
                     htop \
                     btop \
+                    flatpak \
+                    flatpak-spawn \
                     glibc-langpack-en \
                     neofetch \
                     git \
                     gh \
-                    R-CoprManager
+                    'dnf-command(copr)'
+
+
+RUN sudo dnf copr enable iucar/cran \
+      && sudo dnf install -y R-CoprManager
