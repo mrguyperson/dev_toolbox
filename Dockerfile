@@ -6,7 +6,12 @@ LABEL com.github.containers.distrobox="true" \
 
 RUN dnf update -y
 
+RUN sudo dnf copr enable iucar/cran
+
 RUN dnf install -y which \
+                    r-base \
+                    r-base-dev \
+                    atlas \
                     rstudio-desktop \
                     neofetch \
                     htop \
@@ -14,4 +19,5 @@ RUN dnf install -y which \
                     glibc-langpack-en \
                     neofetch \
                     git \
-                    gh
+                    gh \
+                    R-CoprManager
