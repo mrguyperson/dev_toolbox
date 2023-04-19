@@ -23,5 +23,5 @@ RUN sudo dnf install -y which \
                     'dnf-command(copr)'
 
 
-RUN sudo dnf copr enable iucar/cran \
+RUN sudo dnf copr enable -y iucar/cran \
       && sudo dnf install -y R-CoprManager
