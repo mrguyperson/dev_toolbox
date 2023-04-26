@@ -25,3 +25,5 @@ RUN sudo dnf install -y which \
 
 RUN sudo dnf copr enable -y iucar/cran \
       && sudo dnf install -y R-CoprManager
+ENV LC_ALL en_US.UTF-8
+ENV LC_LANG en_US.UTF-8
